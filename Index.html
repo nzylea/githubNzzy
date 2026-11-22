@@ -1,0 +1,650 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description" content="GayaSantai adalah website rekomendasi outfit kekinian yang mudah dipahami untuk semua orang.">
+
+    <title>GayaSantai - Inspirasi Outfit Kekinian</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+    <header class="navbar">
+        <div class="container nav-content">
+
+            <a href="#home" class="logo">
+                Gaya<span>Santai.</span>
+            </a>
+
+            <button class="menu-toggle"
+                    id="menuToggle"
+                    aria-label="Buka menu navigasi"
+                    aria-expanded="false">
+                ☰
+            </button>
+
+            <nav class="nav-menu" id="navMenu">
+                <a href="#home">Beranda</a>
+                <a href="#rekomendasi">Rekomendasi</a>
+                <a href="#kategori">Kategori</a>
+                <a href="#favorit">Favorit</a>
+                <a href="#tips">Tips Fashion</a>
+            </nav>
+
+        </div>
+    </header>
+
+
+    <!-- HERO SECTION -->
+    <section class="hero" id="home">
+
+        <div class="container hero-content">
+
+            <div class="hero-text">
+
+                <span class="hero-label">
+                    ✨ TEMUKAN GAYA TERBAIKMU
+                </span>
+
+                <h1>
+                    Tampil Keren
+                    <span>Tanpa Ribet!</span>
+                </h1>
+
+                <p>
+                    Bingung memilih pakaian setiap hari?
+                    Tenang saja! GayaSantai membantu kamu
+                    menemukan inspirasi outfit kekinian
+                    dengan cara yang mudah dan praktis.
+                </p>
+
+                <div class="hero-buttons">
+                    <a href="#rekomendasi" class="btn-primary">
+                        Lihat Rekomendasi
+                    </a>
+
+                    <a href="#tips" class="btn-secondary">
+                        Pelajari Tips
+                    </a>
+                </div>
+
+                <div class="hero-info">
+                    <div>
+                        <strong>100%</strong>
+                        <span>Mudah Dipahami</span>
+                    </div>
+
+                    <div>
+                        <strong>Simple</strong>
+                        <span>Tanpa Ribet</span>
+                    </div>
+
+                    <div>
+                        <strong>Daily</strong>
+                        <span>Untuk Sehari-hari</span>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="hero-image">
+                <img
+                    src="https://images.unsplash.com/photo-1483985988355-763728e1935b?w=900"
+                    alt="Inspirasi pakaian casual modern">
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- INTRODUCTION -->
+    <section class="introduction">
+
+        <div class="container intro-content">
+
+            <span class="section-label">KENALAN DENGAN KAMI</span>
+
+            <h2>
+                Fashion Tidak Harus
+                <span>Sulit!</span>
+            </h2>
+
+            <p>
+                GayaSantai hadir untuk membantu siapa saja
+                yang ingin tampil lebih menarik tanpa harus
+                mengikuti semua tren fashion.
+
+                Kamu tidak perlu memiliki banyak pakaian.
+                Cukup kombinasikan pakaian sederhana yang
+                sudah kamu miliki dengan tepat.
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- REKOMENDASI OUTFIT -->
+    <section class="recommendation section-padding" id="rekomendasi">
+
+        <div class="container">
+
+            <div class="section-heading">
+
+                <span class="section-label">
+                    PILIHAN UNTUKMU
+                </span>
+
+                <h2>Rekomendasi Outfit</h2>
+
+                <p>
+                    Temukan inspirasi pakaian yang cocok
+                    untuk berbagai aktivitas sehari-hari.
+                </p>
+
+            </div>
+
+
+            <!-- SEARCH -->
+            <div class="search-box">
+
+                <input
+                    type="search"
+                    id="searchInput"
+                    placeholder="Cari outfit, misalnya casual..."
+                    aria-label="Cari rekomendasi outfit">
+
+                <button id="searchButton">
+                    Cari
+                </button>
+
+            </div>
+
+
+            <!-- FILTER -->
+            <div class="filter-buttons" id="kategori">
+
+                <button class="filter-btn active"
+                        data-category="Semua">
+                    Semua
+                </button>
+
+                <button class="filter-btn"
+                        data-category="Casual">
+                    Casual
+                </button>
+
+                <button class="filter-btn"
+                        data-category="Korean">
+                    Korean Style
+                </button>
+
+                <button class="filter-btn"
+                        data-category="Minimalist">
+                    Minimalist
+                </button>
+
+                <button class="filter-btn"
+                        data-category="Streetwear">
+                    Streetwear
+                </button>
+
+            </div>
+
+
+            <!-- RANDOM BUTTON -->
+            <div class="random-area">
+
+                <button id="randomButton" class="btn-random">
+                    🎲 Pilihkan Outfit Untuk Saya
+                </button>
+
+            </div>
+
+
+            <!-- OUTFIT LIST -->
+            <div class="outfit-grid" id="outfitGrid">
+
+                <!-- Diisi melalui JavaScript -->
+
+            </div>
+
+            <p class="empty-message" id="emptyMessage" hidden>
+                Maaf, outfit yang kamu cari belum tersedia.
+                Coba gunakan kata kunci lainnya.
+            </p>
+
+        </div>
+
+    </section>
+
+  
+<!-- KAMERA DAN KOLEKSI PAKAIAN -->
+<section class="wardrobe section-padding" id="kamera">
+
+    <div class="container">
+
+        <div class="section-heading">
+            <span class="section-label">LEMARIKU DIGITAL</span>
+            <h2>Foto Pakaianmu 📸</h2>
+            <p>
+                Foto pakaian yang kamu punya dan kumpulkan
+                semuanya dalam satu tempat.
+            </p>
+        </div>
+
+        <div class="camera-container">
+
+            <div class="camera-preview">
+
+                <video id="cameraVideo"
+                       autoplay
+                       playsinline
+                       muted
+                       hidden>
+                </video>
+
+                <canvas id="cameraCanvas" hidden></canvas>
+
+                <div class="camera-placeholder" id="cameraPlaceholder">
+                    <span>📷</span>
+                    <p>Kamera belum diaktifkan</p>
+                </div>
+
+                <img id="capturedPreview"
+                     alt="Hasil foto pakaian"
+                     hidden>
+
+            </div>
+
+            <p class="camera-status" id="cameraStatus"
+               aria-live="polite">
+                Silakan aktifkan kamera untuk mulai memotret.
+            </p>
+
+            <div class="camera-buttons">
+
+                <button id="startCamera" class="camera-btn">
+                    📸 Aktifkan Kamera
+                </button>
+
+                <button id="capturePhoto"
+                        class="camera-btn"
+                        disabled>
+                    Ambil Foto
+                </button>
+
+                <button id="stopCamera"
+                        class="camera-btn stop-btn"
+                        disabled>
+                    Matikan Kamera
+                </button>
+
+            </div>
+
+            <div class="upload-area">
+
+                <label for="uploadClothes" class="upload-label">
+                    📁 Pilih Foto dari Galeri
+                </label>
+
+                <input type="file"
+                       id="uploadClothes"
+                       accept="image/*">
+
+            </div>
+
+            <div class="save-area">
+
+                <label for="clothesName">Nama Pakaian</label>
+
+                <input type="text"
+                       id="clothesName"
+                       placeholder="Contoh: Kaos putih">
+
+                <label for="clothesCategory">Kategori Pakaian</label>
+
+                <select id="clothesCategory">
+                    <option value="Atasan">Atasan</option>
+                    <option value="Bawahan">Bawahan</option>
+                    <option value="Outer">Outer</option>
+                    <option value="Sepatu">Sepatu</option>
+                    <option value="Aksesori">Aksesori</option>
+                </select>
+
+                <button id="saveClothes" class="save-btn" disabled>
+                    💾 Simpan ke Koleksi
+                </button>
+
+            </div>
+
+        </div>
+
+
+        <!-- KOLEKSI PAKAIAN -->
+
+        <div class="wardrobe-heading">
+            <h2>👕 Koleksi Pakaianku</h2>
+            <p>Daftar pakaian yang sudah kamu foto.</p>
+        </div>
+
+        <div class="clothes-grid" id="clothesGrid"></div>
+
+        <p id="clothesEmpty" class="empty-message">
+            Belum ada pakaian yang disimpan.
+            Yuk, foto pakaianmu terlebih dahulu!
+        </p>
+
+    </div>
+
+</section>
+
+
+    <!-- FAVORIT -->
+    <section class="favorites section-padding" id="favorit">
+
+        <div class="container">
+
+            <div class="section-heading">
+
+                <span class="section-label">
+                    KOLEKSI PILIHANMU
+                </span>
+
+                <h2>Outfit Favorit ❤️</h2>
+
+                <p>
+                    Simpan inspirasi outfit yang kamu sukai
+                    agar mudah ditemukan kembali.
+                </p>
+
+            </div>
+
+            <div class="outfit-grid" id="favoriteGrid">
+
+            </div>
+
+            <p class="empty-message" id="favoriteEmpty">
+                Belum ada outfit favorit.
+                Yuk, pilih outfit yang kamu sukai!
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- CARA MEMADUPADANKAN -->
+    <section class="how-to section-padding">
+
+        <div class="container">
+
+            <div class="section-heading">
+
+                <span class="section-label">
+                    PANDUAN SEDERHANA
+                </span>
+
+                <h2>Bagaimana Cara Mix & Match?</h2>
+
+                <p>
+                    Tidak perlu menjadi ahli fashion.
+                    Ikuti tiga langkah sederhana berikut.
+                </p>
+
+            </div>
+
+
+            <div class="steps-grid">
+
+                <div class="step-card">
+
+                    <div class="step-number">01</div>
+
+                    <div class="step-icon">👕</div>
+
+                    <h3>Pilih Pakaian Dasar</h3>
+
+                    <p>
+                        Mulailah dengan pakaian sederhana
+                        seperti kaus polos, kemeja, atau celana jeans.
+                    </p>
+
+                </div>
+
+
+                <div class="step-card">
+
+                    <div class="step-number">02</div>
+
+                    <div class="step-icon">🎨</div>
+
+                    <h3>Padukan Warna</h3>
+
+                    <p>
+                        Gunakan warna yang mudah dipadukan
+                        seperti putih, hitam, abu-abu, dan beige.
+                    </p>
+
+                </div>
+
+
+                <div class="step-card">
+
+                    <div class="step-number">03</div>
+
+                    <div class="step-icon">👟</div>
+
+                    <h3>Tambahkan Aksesori</h3>
+
+                    <p>
+                        Lengkapi penampilan dengan sepatu,
+                        tas, jam tangan, atau aksesori sederhana.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- TIPS FASHION -->
+    <section class="tips section-padding" id="tips">
+
+        <div class="container">
+
+            <div class="section-heading">
+
+                <span class="section-label">
+                    BELAJAR FASHION
+                </span>
+
+                <h2>Tips Fashion Untuk Pemula</h2>
+
+                <p>
+                    Beberapa tips sederhana agar kamu
+                    semakin mudah menentukan gaya berpakaian.
+                </p>
+
+            </div>
+
+
+            <div class="tips-grid">
+
+                <article class="tip-card">
+                    <div class="tip-icon">🌈</div>
+
+                    <h3>Gunakan Warna Netral</h3>
+
+                    <p>
+                        Warna netral seperti hitam, putih,
+                        cokelat, dan abu-abu mudah dipadukan
+                        dengan berbagai jenis pakaian.
+                    </p>
+                </article>
+
+
+                <article class="tip-card">
+                    <div class="tip-icon">🧥</div>
+
+                    <h3>Manfaatkan Pakaian Lama</h3>
+
+                    <p>
+                        Kamu tidak harus membeli pakaian baru.
+                        Coba kombinasikan kembali pakaian
+                        yang sudah ada di lemari.
+                    </p>
+                </article>
+
+
+                <article class="tip-card">
+                    <div class="tip-icon">✨</div>
+
+                    <h3>Utamakan Kenyamanan</h3>
+
+                    <p>
+                        Pilih pakaian yang nyaman digunakan
+                        dan sesuai dengan aktivitasmu.
+                    </p>
+                </article>
+
+
+                <article class="tip-card">
+                    <div class="tip-icon">👖</div>
+
+                    <h3>Jangan Terlalu Banyak Motif</h3>
+
+                    <p>
+                        Untuk pemula, memadukan satu pakaian
+                        bermotif dengan pakaian polos bisa
+                        menjadi pilihan sederhana.
+                    </p>
+                </article>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- CTA -->
+    <section class="cta">
+
+        <div class="container cta-content">
+
+            <h2>
+                Yuk, Mulai Temukan Gaya Terbaikmu!
+            </h2>
+
+            <p>
+                Tidak perlu bingung lagi memilih pakaian.
+                Mulai dari gaya sederhana yang membuatmu nyaman.
+            </p>
+
+            <a href="#rekomendasi" class="btn-primary">
+                Temukan Outfit Sekarang
+            </a>
+
+        </div>
+
+    </section>
+
+
+    <!-- FOOTER -->
+    <footer class="footer">
+
+        <div class="container footer-content">
+
+            <div class="footer-about">
+
+                <h2>Gaya<span>Santai.</span></h2>
+
+                <p>
+                    Teman fashion sederhana untuk membantu
+                    semua orang tampil lebih percaya diri
+                    dengan pakaian sehari-hari.
+                </p>
+
+            </div>
+
+
+            <div class="footer-links">
+
+                <h3>Navigasi</h3>
+
+                <a href="#home">Beranda</a>
+                <a href="#rekomendasi">Rekomendasi</a>
+                <a href="#kategori">Kategori</a>
+                <a href="#tips">Tips Fashion</a>
+
+            </div>
+
+
+            <div class="footer-links">
+
+                <h3>Tentang Website</h3>
+
+                <p>Website Inspirasi Fashion</p>
+                <p>Fashion Untuk Semua</p>
+                <p>Simple & Modern</p>
+
+            </div>
+
+        </div>
+
+
+        <div class="copyright">
+
+            <p>
+                &copy; 2026 GayaSantai.
+                All Rights Reserved.
+            </p>
+
+        </div>
+
+    </footer>
+
+
+    <!-- MODAL DETAIL OUTFIT -->
+    <div class="modal" id="outfitModal"
+         role="dialog"
+         aria-modal="true"
+         aria-labelledby="modalTitle"
+         hidden>
+
+        <div class="modal-content">
+
+            <button class="modal-close"
+                    id="modalClose"
+                    aria-label="Tutup detail">
+                &times;
+            </button>
+
+            <div id="modalBody"></div>
+
+        </div>
+
+    </div>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>
+
